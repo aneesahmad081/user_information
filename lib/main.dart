@@ -6,7 +6,7 @@ import 'package:user_information/UI/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(); // make sure Firebase is ready
+  await Firebase.initializeApp();
 
   runApp(
     MultiProvider(

@@ -25,7 +25,6 @@ class StudentProvider with ChangeNotifier {
   Future<void> searchStudent({String? name, int? rollNumber}) async {
     Query collectionQuery = FirebaseFirestore.instance.collection("students");
 
-    // Add filters if provided
     if (name != null && name.isNotEmpty) {
       collectionQuery = collectionQuery.where("name", isEqualTo: name);
     }
