@@ -26,12 +26,19 @@ class _SearchPageState extends State<SearchPage> {
     final provider = Provider.of<StudentProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Search Students")),
+      appBar: AppBar(
+        backgroundColor: Colors.indigo,
+        title: const Text(
+          'Search Students',
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+      ),
+
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Search by Name
             TextField(
               controller: nameController,
               decoration: const InputDecoration(
@@ -44,7 +51,6 @@ class _SearchPageState extends State<SearchPage> {
             ),
             const SizedBox(height: 16),
 
-            // Search by Roll Number
             TextField(
               controller: rollNumberController,
               keyboardType: TextInputType.number,
@@ -59,7 +65,6 @@ class _SearchPageState extends State<SearchPage> {
             ),
             const SizedBox(height: 16),
 
-            // Search by Subject (Dropdown)
             DropdownButtonFormField<String>(
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -86,16 +91,13 @@ class _SearchPageState extends State<SearchPage> {
                   selectedSubject = value;
                 });
                 if (value != null) {
-                  provider.searchStudent(
-                    name: value,
-                  ); // You can modify if you want subject search
+                  provider.searchStudent(name: value);
                 }
               },
             ),
 
             const SizedBox(height: 16),
 
-            // Results List
             Expanded(
               child: provider.students.isEmpty
                   ? const Center(child: Text("No students found"))
