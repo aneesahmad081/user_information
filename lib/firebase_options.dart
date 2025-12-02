@@ -27,7 +27,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        return windows;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -41,48 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAPlbgivuSN-PLzavSQfQeuHmbhrsLgRzE',
-    appId: '1:206904742858:web:6a7a942f7b91063b737533',
-    messagingSenderId: '206904742858',
-    projectId: 'user-information-95136',
-    authDomain: 'user-information-95136.firebaseapp.com',
-    storageBucket: 'user-information-95136.firebasestorage.app',
-    measurementId: 'G-DHNE30HKJS',
+    apiKey: 'AIzaSyBDqwJb3fDjjF-aycxVx8rCzrrPY4FuVqU',
+    appId: '1:947731786438:web:2fcec688609468424ac5c7',
+    messagingSenderId: '947731786438',
+    projectId: 'user-information-d6559',
+    authDomain: 'user-information-d6559.firebaseapp.com',
+    storageBucket: 'user-information-d6559.firebasestorage.app',
+    measurementId: 'G-PSQC4G04V3',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD6adzRll3_zLb5mLSFfaB03r6SaM6rAAA',
-    appId: '1:206904742858:android:24557ecac31f7d3e737533',
-    messagingSenderId: '206904742858',
-    projectId: 'user-information-95136',
-    storageBucket: 'user-information-95136.firebasestorage.app',
+    apiKey: 'AIzaSyASh0zONkUVW6x7PW8JQrem66MyPsFquVo',
+    appId: '1:947731786438:android:c195ca8c8105055e4ac5c7',
+    messagingSenderId: '947731786438',
+    projectId: 'user-information-d6559',
+    storageBucket: 'user-information-d6559.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBtiwrqH77qScD0F_FJj-twwRFsZVbzf1E',
-    appId: '1:206904742858:ios:81a06e93eb2b9aa6737533',
-    messagingSenderId: '206904742858',
-    projectId: 'user-information-95136',
-    storageBucket: 'user-information-95136.firebasestorage.app',
+    apiKey: 'AIzaSyAHxcjA8-6studrxliqoRu0owD19dyq0Bk',
+    appId: '1:947731786438:ios:b3e516a49cebbc314ac5c7',
+    messagingSenderId: '947731786438',
+    projectId: 'user-information-d6559',
+    storageBucket: 'user-information-d6559.firebasestorage.app',
     iosBundleId: 'com.example.userInformation',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBtiwrqH77qScD0F_FJj-twwRFsZVbzf1E',
-    appId: '1:206904742858:ios:81a06e93eb2b9aa6737533',
-    messagingSenderId: '206904742858',
-    projectId: 'user-information-95136',
-    storageBucket: 'user-information-95136.firebasestorage.app',
+    apiKey: 'AIzaSyAHxcjA8-6studrxliqoRu0owD19dyq0Bk',
+    appId: '1:947731786438:ios:b3e516a49cebbc314ac5c7',
+    messagingSenderId: '947731786438',
+    projectId: 'user-information-d6559',
+    storageBucket: 'user-information-d6559.firebasestorage.app',
     iosBundleId: 'com.example.userInformation',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyAPlbgivuSN-PLzavSQfQeuHmbhrsLgRzE',
-    appId: '1:206904742858:web:d87c76e67004864b737533',
-    messagingSenderId: '206904742858',
-    projectId: 'user-information-95136',
-    authDomain: 'user-information-95136.firebaseapp.com',
-    storageBucket: 'user-information-95136.firebasestorage.app',
-    measurementId: 'G-D2MSNWTKR6',
   );
 }

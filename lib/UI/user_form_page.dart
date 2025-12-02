@@ -33,12 +33,12 @@ class _UserFormPageState extends State<UserFormPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              'https://scontent.fisb5-1.fna.fbcdn.net/v/t39.30808-6/512696822_24736909952576872_3980873767850930798_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=SBmVvRuf1mEQ7kNvwHzZpfA&_nc_oc=AdlzPgSEznQZNUJSpCMXJDhOQwpdO4VSTNC_b_RZnndhdVlIKU6ZjC_3euXIHTSdwWfQQzlvMO2tbtqaD4pD1RfG&_nc_zt=23&_nc_ht=scontent.fisb5-1.fna&_nc_gid=Kr4Ag0aqZYelec4eL8pb8A&oh=00_AfaaeMiS7RDAu-QFCKzJ7teO8-7YakIn-SdzmKp4BMbhkQ&oe=68D984B3',
-              fit: BoxFit.cover,
-              height: 150,
-              width: double.infinity,
-            ),
+            // Image.network(
+            //   'https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx3nX-O5GCgXp4RyvfM2OavJZDrnN_0eYBy1Yofc5zu-zxHdPj5bmNRkRExNZ7NGaGcL6HkjB5enIeZlye9zhVW9ZTDOxgWIEyHMnQsGLBCcNNwanlyJPbkGPZAHZPCJ_rZin0=s1360-w1360-h1020-rw',
+            //   fit: BoxFit.cover,
+            //   height: 200,
+            //   width: double.infinity,
+            // ),
             const SizedBox(height: 20),
 
             Padding(
@@ -92,7 +92,7 @@ class _UserFormPageState extends State<UserFormPage> {
                       ),
                     ),
                     hint: const Text("Select a Subject"),
-                    value: _selectedSubject,
+                    initialValue: _selectedSubject,
                     items:
                         [
                               "Professional Practices",
